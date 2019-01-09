@@ -1,0 +1,1 @@
+export const staticAPI = 'http://statics.zhuishushenqi.com'

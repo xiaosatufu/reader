@@ -6,6 +6,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import Header from "./common/header";
 import Search from "./pages/searchPage";
+import Detail from "./pages/detailPage"
 
 import store from "./store";
 
@@ -17,6 +18,7 @@ class App extends Component {
           <div className="App">
             <Header />
             <Route path="/search" exact component={Search} />
+            <Route path="/detail" exact component={Detail} />
           </div>
         </BrowserRouter>
       </Provider>

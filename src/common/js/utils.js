@@ -6,7 +6,7 @@ export function getUrlPrmt(url) {
         _rs = {};
     for (var i = 0, _len = _arrS.length; i < _len; i++) {
         var pos = _arrS[i].indexOf('=');
-        if (pos == -1) {
+        if (pos === -1) {
             continue;
         }
         var name = _arrS[i].substring(0, pos),

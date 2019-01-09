@@ -2,32 +2,62 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { BrowserRouter, Link } from "react-router-dom";
 import { actionCreators } from "./store";
-import "./indes.scss";
+import {actionCreators as searchActionCreators} from '../../pages/searchPage/store'
+import "./index.scss";
 
 class Header extends Component {
   constructor() {
     super();
-    // this.handleSearch = this.handleSearch.bind(this);
+    this.state ={
+      value:""
+    }
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   render() {
-    const { handleInputChange, searchTxt } = this.props;
+    // const {  searchTxt } = this.props;
+    const {handleSearch} = this.props
     return (
       <div className="header-wrapper">
-        <div className="m-ct">
+        <div className="m-ct clearfix">
           <div className="header-logo" />
           <div className="header-search">
             <input
               type="text"
               className="search-input"
               placeholder="请搜索作者或书名"
-              onChange={handleInputChange}
+              onChange={this.handleInputChange}
+              value={this.state.value}
             />
-            <Link to={"/search?keywords=" + searchTxt} className="search-btn" />
+            {/* <Link to={"/search?keywords="+this.state.value } className="search-btn" onClick={()=>handleSearch(this.state.value)} /> */}
+            <Link to={{
+              pathname:'/search',
+              search:'?keywords='+ this.state.value,
+              state:{
+                searchTxt:this.state.value
+              }
+
+             }} className="search-btn" onClick={()=>handleSearch(this.state.value)} />
           </div>
+        </div>
+        <div className="header-nav">
+          <ul>
+            <li><Link to={"/"}>  首页</Link></li>
+            <li><Link to={"/"}>  精选</Link></li>
+            <li><Link to={"/"}>  分类</Link></li>
+            <li><Link to={"/"}>  书单</Link></li>
+            <li><Link to={"/"}>  排行榜</Link></li>
+            <li><Link to={"/"}>  客户端</Link></li>
+          </ul>
         </div>
       </div>
     );
+  }
+  handleInputChange(e) {
+    console.log(e.target.value)
+    this.setState({
+      value:e.target.value
+    })
   }
   // handleSearch(){
   // this.context.router.history.push("/search");
@@ -40,18 +70,18 @@ class Header extends Component {
 
 const mapStateProps = state => {
   return {
-    searchTxt: state.getIn(["header", "searchTxt"])
+    // searchTxt: state.getIn(["header", "searchTxt"])
   };
 };
 
 const mapDispatchProps = dispatch => {
   return {
-    // handleSearch() {
-    //   dispatch(actionCreators.getSearch());
-    // },
-    handleInputChange(e) {
-      dispatch(actionCreators.changeSearchTxt(e.target.value));
-    }
+    handleSearch(keyword) {
+      dispatch(searchActionCreators.searchBooks(keyword));
+    },
+    // handleInputChange(e) {
+    //   dispatch(actionCreators.changeSearchTxt(e.target.value));
+    // }
   };
 };
 

@@ -1,11 +1,13 @@
 .header-wrapper {
-    height: 100px;
+    // height: 100px;
+    // overflow: hidden;
     background: #fafaf8;
-    overflow: hidden;
 
     .m-ct {
         width: 1200px;
         margin: 0 auto;
+        height: 100px;
+        overflow: hidden;
     }
 
     .header-logo {
@@ -44,6 +46,41 @@
             background-repeat: no-repeat;
             background-position: center center;
             cursor: pointer;
+        }
+    }
+
+    .header-nav {
+        height: 60px;
+        background: #d82626;
+
+        ul {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            height: 100%;
+            text-align: center;
+            align-items: center;
+
+            li {
+                flex: 1;
+                list-style: none;
+                height: 100%;
+                line-height: 60px;
+
+                :hover {
+                    background: #a70a0a;
+                    color: #fff;
+                }
+
+                a {
+                    text-decoration: none;
+                    position: relative;
+                    display: block;
+                    color: #f0bdbd;
+                    font-size: 16px;
+
+                }
+            }
         }
     }
 }

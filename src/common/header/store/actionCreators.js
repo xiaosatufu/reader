@@ -1,8 +1,8 @@
 import * as constants from './constants'
-import axios from 'axios'
-import {
-    fromJS
-} from 'immutable'
+// import axios from 'axios'
+// import {
+//     fromJS
+// } from 'immutable'
 
 
 export const changeSearchTxt = (val) =>({
@@ -11,10 +11,10 @@ export const changeSearchTxt = (val) =>({
 })
 
 
-export const getSearch = () =>{
-    return (dispatch) =>{
-        axios.get('/search?keyword=遮天').then((res)=>{
-            console.log(res)
-        })
-    }
-}
+// export const getSearch = () =>{
+//     return (dispatch) =>{
+//         axios.get('/search?keyword=遮天').then((res)=>{
+//             console.log(res)
+//         })
+//     }
+// }

@@ -1,0 +1,86 @@
+
+        .books-list {
+            li {
+                width: 100%;
+                padding: 30px 0;
+                border-bottom: 1px solid #ccc;
+                position: relative;
+                img {
+                    float: left;
+                    width: 90px;
+                    height: 120px;
+                    border: 1px solid #ebebeb;
+                    background-position: center;
+                    background-size: 100%;
+                    box-shadow: 2px 4px 6px #bbb;
+                }
+
+                .right-info {
+                    height: 120px;
+                    margin-left: 105px;
+
+                    p {
+                        line-height: 20px;
+                        color: #999;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        font-size: 12px;
+                    }
+
+                    .name {
+                        font-size: 14px;
+                        height: 22px;
+                        line-height: 22px;
+                        color: #333 !important;
+
+                        a {
+                            color: #666
+                        }
+                    }
+
+                    .author {
+                        height: 28px;
+                        line-height: 28px;
+                        color: #999;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        font-size: 12px;
+                    }
+
+                    .desc {
+                        height: 40px;
+                        margin: 5px 0;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+
+                    }
+
+                    .popularity {
+                        height: 20px;
+                        line-height: 20px;
+                        color: #999;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        font-size: 12px;
+
+                        .split {
+                            padding: 0 10px;
+                        }
+                    }
+                }
+
+                .btn-read {
+                    position: absolute;
+                    right: 0;
+                    bottom: 15px;
+                    width: 120px;
+                    height: 30px;
+                    line-height: 30px;
+                    color: #fff;
+                    text-align: center;
+                    border: 0 none;
+                    background: #d82626;
+                }
+            }
+        }

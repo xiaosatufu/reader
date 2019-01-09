@@ -12,5 +12,8 @@ export default (state = defaultState,action) =>{
     if (action.type===constants.HEADER_SEARCHTXT) {
         return state.set('searchTxt',action.val)
     }
+    // if (action.type===constants.HEADER_SEARCHTXT) {
+    //     return
+    // }
     return state
 }
