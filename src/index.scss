@@ -536,3 +536,17 @@ table {
 .page-home {
   padding: 15px 0;
 }
+a {
+  color: #666;
+  font-size: 14px;
+}
+.clearfix{
+  *zoom: 1;
+}
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
