@@ -97,15 +97,15 @@ class HomePage extends Component {
 }
 
 const mapDispatchProps = dispatch => ({
-  getCategory() {
+  getCategory() {   
     dispatch(actionCreators.getCategory());
-  },
+  },    
   getRankCategory() {
     dispatch(actionCreators.getRankCategory());
-  },
-  getRanking(id) {
+  },   
+  getRanking(id) { 
     dispatch(actionCreators.getRanking(id));
-  }
+  }   
 });
 const mapStateProps = state => ({
   catrgories: state.getIn(["home", "category"]),

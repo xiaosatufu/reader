@@ -36,5 +36,6 @@
   "proxy": "https://novel.juhe.im",
   "devDependencies": {
     "postcss-loader": "^3.0.0"
-  }
+  },
+  "homepage":"https://xiaosatufu.github.io/reader"
 }
